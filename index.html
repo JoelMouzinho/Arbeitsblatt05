@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalorien Zähler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: eigenes CSS */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen bg-gray-100">
+    <header class="p-4 bg-white shadow-md">
+        <div class="container flex items-center gap-4 border-b-gray-200 border-b pb-4">
+            <img src="logo.png" alt="Logo" class="w-10" />
+            <span class="font-mono font-bold text-xl">Kalorien Zähler</span>
+        </div>
+    </header>
+    <main class="container py-4 flex flex-col items-center gap-4 bg-white rounded-lg shadow-md mt-4" id="app">
+        <!-- Formular zum Hinzufügen von Lebensmitteln -->
+        <form id="calorie-form" class="flex flex-col gap-4">
+            <input id="food-name" type="text" placeholder="Name des Lebensmittels" class="border border-gray-300 p-2 rounded" />
+            <input id="calorie-input" type="number" placeholder="Kalorien hinzufügen" class="border border-gray-300 p-2 rounded" />
+            <button id="add-calories" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Hinzufügen</button>
+        </form>
+        
+        <!-- Liste der hinzugefügten Lebensmittel -->
+        <ul id="calorie-list" class="w-full space-y-2 mt-4"></ul>
+        
+        <!-- Anzeige der Gesamtkalorien -->
+        <p id="total-calories" class="text-2xl mt-4">Gesamtkalorien: 0</p>
+    </main>
+    <footer class="p-4 bg-white shadow-md mt-4">
+        <div class="container text-center">
+            Dies ist ein einfacher Kalorienzähler
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
